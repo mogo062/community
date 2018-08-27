@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ForumsService } from './services/forums.service';
+import { Forum } from './services/data';
+
 @Component({
   selector: 'forums',
   templateUrl: './forums.component.html',
   styleUrls: ['./forums.component.css']
 })
 export class ForumsComponent implements OnInit {
+  private forums : Forum [];
 
-  constructor() { }
+  constructor(private forumsService : ForumsService ) { }
 
   ngOnInit() {
+    this.forums = this.forumsService.forums;
   }
 
 }
