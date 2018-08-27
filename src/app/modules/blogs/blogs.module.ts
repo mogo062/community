@@ -4,21 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { ClarityModule } from '@clr/angular';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ForumsRoutingModule } from './forums-routing.module';
-import { ForumsComponent } from './forums.component';
-import { ForumComponent } from './components/forum/forum.component';
+import { BlogsRoutingModule } from './blogs-routing.module';
+
+import { BlogsComponent } from './blogs.component';
 
 
 @NgModule({
   declarations:[
-    ForumsComponent,
-    ForumComponent
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ClarityModule.forChild(),
-    ForumsRoutingModule
+    BlogsRoutingModule
   ]
 })
-export class ForumsModule { }
+export class BlogsModule { }

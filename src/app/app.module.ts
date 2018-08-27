@@ -5,11 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { ForumsModule } from './modules/forums/forums.module';
+import { BlogsModule } from './modules/blogs/blogs.module';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { LoginComponent } from './components/login/login.component';
-import { BlogsComponent } from './components/blogs/blogs.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { ChatListComponent } from './components/chat-list/chat-list.component';
 
@@ -19,7 +22,6 @@ import { ChatListComponent } from './components/chat-list/chat-list.component';
     NavbarComponent,
     NotFoundComponent,
     LoginComponent,
-    BlogsComponent,
     ChatComponent,
     ChatListComponent
   ],
@@ -27,6 +29,8 @@ import { ChatListComponent } from './components/chat-list/chat-list.component';
     BrowserModule,
     BrowserAnimationsModule,
     ClarityModule,
+    ForumsModule,
+    BlogsModule,
     AppRoutingModule
 
   ],
