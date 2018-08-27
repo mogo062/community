@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ForumsModule } from './modules/forums/forums.module';
+
+import { LoginComponent } from './components/login/login.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
-import { ForumsComponent } from './components/forums/forums.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
+  { path:'login', component: LoginComponent},
   { path :'blogs', component: BlogsComponent},
-  { path :'forums', component: ForumsComponent},
+  { path:'', redirectTo: '/forums', pathMatch: 'full'},
+  { path:'**', component: NotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    ForumsModule,
+    RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
