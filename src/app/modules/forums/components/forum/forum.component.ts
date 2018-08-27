@@ -16,7 +16,7 @@ export class ForumComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params : Params) => {
       this.forum = this.forumsService.forum(params['forum_alias']);
-      if(! this.forum ) this.router.navigate(['/not-found'])
+      if(! this.forum ) this.router.navigate(['/not-found']);
     });
   }
 

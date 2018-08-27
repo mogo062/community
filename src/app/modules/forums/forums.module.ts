@@ -7,12 +7,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { ForumsRoutingModule } from './forums-routing.module';
 import { ForumsComponent } from './forums.component';
 import { ForumComponent } from './components/forum/forum.component';
+import { ThreadsComponent } from './components/threads/threads.component';
+import { ThreadComponent } from './components/thread/thread.component';
 
 
 @NgModule({
   declarations:[
     ForumsComponent,
-    ForumComponent
+    ForumComponent,
+    ThreadsComponent,
+    ThreadComponent
   ],
   imports: [
     BrowserModule,
