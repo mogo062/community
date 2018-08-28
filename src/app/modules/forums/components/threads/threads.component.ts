@@ -15,6 +15,7 @@ export class ThreadsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params : Params) => {
       this.threads = this.forumsService.threads(params['forum_alias']);
+      
       if(! this.threads ) this.router.navigate(['/not-found']);
     });
 
