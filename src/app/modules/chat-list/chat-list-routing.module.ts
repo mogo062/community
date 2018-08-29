@@ -8,7 +8,7 @@ import { AuthGuardService } from '../../services/auth-guard.service';
 
 const chatRoutes: Routes = [
   { path:'users', component: ChatListComponent, outlet:'chat', canActivate : [AuthGuardService]},
-  { path:'users/:username', component: ChatComponent, outlet:'chat'},
+  { path:'users/:username', component: ChatComponent, outlet:'chat', canActivate : [AuthGuardService]},
 ];
 
 @NgModule({
