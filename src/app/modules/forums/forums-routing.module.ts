@@ -6,8 +6,10 @@ import { ForumComponent } from './components/forum/forum.component';
 import { ThreadsComponent } from './components/threads/threads.component';
 import { ThreadComponent } from './components/thread/thread.component';
 
+import { AuthGuardService } from '../../services/auth-guard.service';
+
 const forumsRoutes: Routes = [
-  { path :'forums', component: ForumsComponent},
+  { path :'forums', component: ForumsComponent, canActivate : [AuthGuardService]},
   {
     path :'forums/:forum_alias', component: ForumComponent,
     children: [
